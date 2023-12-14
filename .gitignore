@@ -4,3 +4,4 @@
 ipc_signal
 intra_semaphore
 ipc_named_semaphore
+ipc_pipe

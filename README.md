@@ -6,3 +6,5 @@ List of implemented examples:
 
 1. `ipc_signal`: Receiver registers a signal handler and loops
 2. `intra_semaphore`: using unnamed semaphores within a process; not working on MacOS
+3. `ipc_named_semaphore`: Named semaphore to be used between two independent processes
+4. `ipc_pipe`: Unnamend pipe
