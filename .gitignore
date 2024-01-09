@@ -7,3 +7,4 @@ intra_semaphore
 ipc_named_semaphore
 ipc_pipe
 ipc_named_pipe
+.DS_Store
