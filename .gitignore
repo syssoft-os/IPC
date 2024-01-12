@@ -7,4 +7,5 @@ intra_semaphore
 ipc_named_semaphore
 ipc_pipe
 ipc_named_pipe
+ipc_unix_domain_socket
 .DS_Store
