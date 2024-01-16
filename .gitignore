@@ -9,5 +9,6 @@ ipc_pipe
 ipc_named_pipe
 ipc_unix_domain_socket
 ipc_zmq
+intra_zmq
 
 .DS_Store
