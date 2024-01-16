@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -g
-LIBS = -lm -pthread
+CFLAGS = -Wall -g -I/opt/homebrew/include
+LIBS = -lm -pthread -lzmq -L/opt/homebrew/lib
 TARGETS = $(patsubst %.c,%,$(wildcard *.c))
 
 all: $(TARGETS)

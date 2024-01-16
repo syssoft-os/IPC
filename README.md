@@ -10,3 +10,4 @@ List of implemented examples:
 4. `ipc_pipe`: Unnamed pipe
 5. `ipc_named_pipe`: Named pipe to be used between two independent processes
 6. `ipc_unix_domain_socket`: Using a UNIX domain socket to communicate between processes
+7. `ipc_zmq`: ZMQ pair sockets are used to communicate between two processes
