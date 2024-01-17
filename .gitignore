@@ -10,5 +10,6 @@ ipc_named_pipe
 ipc_unix_domain_socket
 ipc_zmq
 intra_zmq
+ipc_shared_memory
 
 .DS_Store
