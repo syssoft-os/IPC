@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>
+#include <unistd.h>
 
 #define DEFAULT_SOCKET_ADDR "inproc://zmqtest"
 
@@ -19,6 +20,8 @@ void *worker_routine(void *context) {
     zmq_recv(socket, reply, 10, 0);
     printf("Received: %s\n", reply);
 
+    sleep(2);
+
     zmq_close(socket);
     return NULL;
 }
@@ -34,6 +37,8 @@ int main() {
 
     pthread_t worker;
     pthread_create(&worker, NULL, worker_routine, context);
+
+    sleep(2);
 
     char buffer[10];
     zmq_recv(socket, buffer, 10, 0);
