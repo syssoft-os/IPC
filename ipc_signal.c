@@ -7,22 +7,27 @@
 bool signal_received = false;
 
 void sigusr1_handler(int signum) {
-    printf("Received SIGUSR1 signal\n");
     signal_received = true;
 }
 
 void child_process() {
     printf("Hello from the child process!\n");
     signal(SIGUSR1, sigusr1_handler);
-    while (!signal_received) {
+    while (true) {
+        if (signal_received) {
+            printf("Received SIGUSR1 signal\n");
+            signal_received = false;
+        }
+        else
+            printf("Waiting for SIGUSR1 signal\n");
         sleep(1);
-        printf("Waiting for SIGUSR1 signal\n");
     }
 }
 
 void parent_process(int child_pid) {
     printf("Hello from the parent process!\n");
-    sleep(4);
+    printf("Child process has PID: %d\n", child_pid);
+    sleep(10);
     printf("Sending SIGUSR1 signal to child process\n");
     kill(child_pid, SIGUSR1);
 }
